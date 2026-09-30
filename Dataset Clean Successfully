@@ -1,0 +1,11 @@
+import os
+
+dataset_path = "algae_ai/dataset"
+
+print("Current Folder:", os.getcwd())
+print("Dataset Exists:", os.path.exists(dataset_path))
+
+if os.path.exists(dataset_path):
+    print(os.listdir(dataset_path))
+else:
+    print("Dataset path not found")
