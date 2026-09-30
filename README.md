@@ -1,49 +1,161 @@
 # 🌿 AI-Powered Smart Algae Exhaust Carbon Capture System
 
-An IoT and AI-based carbon capture system that uses **microalgae to absorb CO₂ from exhaust air** while continuously monitoring environmental parameters.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red?logo=streamlit)](https://ai-powered-smart-algae-exhausat-carbon-capture-system-syer5tuc.streamlit.app/)
 
-The system uses an **ESP32**, dual **MQ135 sensors**, an algae tank, air pump, relay module, water-level sensor, and temperature sensor. AI/ML is used to estimate carbon capture efficiency and support automated control of the system.
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/AjayA23/Ai-powered-smart-algae-exhausat-carbon-capture-system)
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
+
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)](https://streamlit.io/)
 
 ---
 
-## 🚀 Project Overview
+## 📌 Project Overview
 
-The **AI-Powered Smart Algae Exhaust Carbon Capture System** is designed to reduce CO₂ emissions by passing exhaust air through an algae-based absorption system.
+The **AI-Powered Smart Algae Exhaust Carbon Capture System** is an IoT and AI-based environmental monitoring system designed to demonstrate algae-based carbon capture from exhaust air.
 
-The system measures air quality before and after the algae tank:
+The system uses **microalgae to absorb carbon dioxide from air** while continuously monitoring environmental parameters.
 
-**Exhaust Air → MQ135 Input → Algae Tank → MQ135 Output → Cleaned Air**
+The project combines:
 
-The ESP32 collects sensor data and controls the connected actuators automatically.
+* 🌱 Microalgae-based carbon capture
+* 🤖 Artificial Intelligence / Machine Learning
+* 📡 IoT monitoring
+* 🌫️ MQ135 air-quality sensors
+* 💨 Automatic air-pump control
+* 🌡️ Temperature monitoring
+* 💧 Water-level monitoring
+* 💡 Automatic LED control
+* 📊 Carbon capture efficiency estimation
+
+---
+
+## 🚀 Live Demo
+
+### 🌐 Try the Application
+
+**[👉 Open Live Demo](https://ai-powered-smart-algae-exhausat-carbon-capture-system-syer5tuc.streamlit.app/)**
+
+The Streamlit dashboard provides an interface for monitoring sensor values and viewing the system's carbon-capture-related parameters.
 
 ---
 
 ## 🎯 Objectives
 
-* Monitor exhaust air quality in real time.
-* Use microalgae for biological CO₂ absorption.
-* Measure air quality before and after the algae tank.
+The main objectives of this project are:
+
+* Monitor air quality before and after the algae tank.
+* Demonstrate algae-based carbon capture.
 * Automatically control the air pump.
-* Monitor algae tank temperature and water level.
-* Estimate carbon capture efficiency using Machine Learning.
-* Provide a foundation for IoT-based environmental monitoring.
+* Monitor algae tank temperature.
+* Monitor water level.
+* Estimate carbon capture efficiency.
+* Apply Machine Learning for efficiency prediction.
+* Develop an IoT-based environmental monitoring system.
+* Provide a smart platform for environmental monitoring and analysis.
+
+---
+
+## 🏗️ System Architecture
+
+```text
+                         EXHAUST AIR
+                              │
+                              ▼
+                     ┌────────────────┐
+                     │  MQ135 INPUT   │
+                     └───────┬────────┘
+                             │
+                             ▼
+                     ┌────────────────┐
+                     │    AIR PUMP    │
+                     └───────┬────────┘
+                             │
+                             ▼
+              ┌─────────────────────────────┐
+              │          ALGAE TANK         │
+              │                             │
+              │         MICROALGAE          │
+              │                             │
+              │   🌡 Temperature Sensor    │
+              │   💧 Water-Level Sensor     │
+              └──────────────┬──────────────┘
+                             │
+                             ▼
+                     ┌────────────────┐
+                     │  MQ135 OUTPUT  │
+                     └───────┬────────┘
+                             │
+                             ▼
+                          ┌───────┐
+                          │ ESP32 │
+                          └───┬───┘
+                              │
+                 ┌────────────┴────────────┐
+                 ▼                         ▼
+          ┌──────────────┐          ┌──────────────┐
+          │ Relay Module │          │  AI / ML     │
+          └──────┬───────┘          │    Model     │
+                 │                  └──────┬───────┘
+            ┌────┴────┐                     │
+            ▼         ▼                     ▼
+       Air Pump      LED             Capture Efficiency
+```
+
+---
+
+## ⚙️ Working Principle
+
+### 1. Exhaust Air Input
+
+Exhaust air enters the system through the input section.
+
+### 2. Input Air Monitoring
+
+The first **MQ135 sensor** measures the incoming air-quality level.
+
+### 3. Air Pump
+
+The air pump pushes the air through the algae tank.
+
+### 4. Algae-Based Carbon Capture
+
+The air passes through the algae tank where microalgae can utilize carbon dioxide as part of their biological growth process.
+
+### 5. Output Monitoring
+
+After passing through the algae tank, the second MQ135 sensor measures the output air.
+
+### 6. ESP32 Processing
+
+The ESP32 collects sensor values and controls the connected devices.
+
+### 7. Efficiency Calculation
+
+The input and output readings are compared to estimate capture efficiency.
+
+### 8. AI Prediction
+
+The Machine Learning model can use sensor and environmental data to estimate carbon capture efficiency.
 
 ---
 
 ## 🧰 Hardware Components
 
-* ESP32 Development Board
-* MQ135 Sensor × 2
-* Algae Tank
-* Microalgae
-* Air Pump
-* Relay Module
-* 12V Power Adapter
-* Water-Level Sensor
-* DS18B20 Temperature Sensor
-* LED / Lighting System
-* Connecting Wires
-* Tubes / Air Pipes
+| Component                  |    Quantity |
+| -------------------------- | ----------: |
+| ESP32 Development Board    |           1 |
+| MQ135 Sensor               |           2 |
+| Algae Tank                 |           1 |
+| Microalgae                 | As required |
+| Air Pump                   |           1 |
+| Relay Module               |           1 |
+| DS18B20 Temperature Sensor |           1 |
+| Water-Level Sensor         |           1 |
+| LED / Lighting System      |           1 |
+| 12V Power Adapter          |           1 |
+| Connecting Wires           | As required |
+| Air Tubes                  | As required |
 
 ---
 
@@ -58,83 +170,74 @@ The ESP32 collects sensor data and controls the connected actuators automaticall
 | Air Pump Relay             | GPIO 12   |
 | LED Relay                  | GPIO 13   |
 
-### Relay Logic
+### Relay Configuration
 
 * **Air Pump Relay:** Active LOW
 * **LED Relay:** Active HIGH
 
 ---
 
-## ⚙️ Working Principle
+## 🤖 Artificial Intelligence / Machine Learning
 
-1. Exhaust air enters the system.
-2. The first MQ135 sensor measures the incoming air quality.
-3. The air is passed through the algae tank using an air pump.
-4. Microalgae absorb a portion of the available carbon dioxide during the process.
-5. The second MQ135 sensor measures the air quality after the algae tank.
-6. The ESP32 compares input and output readings.
-7. Capture efficiency is calculated from the sensor readings.
-8. The air pump is automatically controlled according to the configured threshold.
-9. The system monitors water level and temperature to maintain suitable algae conditions.
-10. The AI/ML model can be used to estimate carbon capture efficiency from collected sensor data.
+The project uses Machine Learning to estimate **carbon capture efficiency** from sensor and environmental parameters.
 
----
+### Machine Learning Algorithm
 
-## 🤖 AI / Machine Learning
+```text
+Random Forest Regressor
+```
 
-A Machine Learning model is used to estimate **Capture Efficiency (%)** based on sensor and environmental parameters.
+### Possible Input Parameters
 
-The project uses a **Random Forest Regressor** for prediction.
-
-Possible input parameters include:
-
-* Input MQ135 reading
-* Output MQ135 reading
+* MQ135 Input Reading
+* MQ135 Output Reading
 * Temperature
-* Water level
-* Other collected system parameters
+* Water Level
+* Other collected sensor parameters
 
-### ML Target
+### Prediction Target
 
 ```text
 CaptureEfficiency_percent
 ```
 
-The trained model can be saved as:
+The trained model can be stored in the project as:
 
 ```text
 algae_model.keras
 ```
 
-or as a compatible trained model file depending on the implementation.
+or another compatible model format depending on the implementation.
 
 ---
 
 ## 🔄 Automatic Control
 
-### Air Pump
+### 💨 Air Pump Control
 
 When the input air-quality reading exceeds the configured threshold:
 
 ```text
 MQ135 Input > 1200
-        ↓
-Air Pump ON
+        │
+        ▼
+   Air Pump ON
 ```
 
-The pump can be automatically controlled through the relay module.
+The ESP32 activates the relay connected to the air pump.
 
-### LED / Algae Lighting
+### 💡 LED Control
 
-When the configured temperature condition is above the project threshold:
+When the configured temperature condition exceeds the project threshold:
 
 ```text
 Temperature > 30°C
-        ↓
-LED Control Activated
+        │
+        ▼
+ LED Control Activated
 ```
 
-> These thresholds are configurable and should be calibrated according to the actual hardware, algae species, sensor characteristics, and experimental conditions.
+These thresholds can be modified according to the experimental setup.
 
 ---
 
@@ -147,61 +250,46 @@ Capture Efficiency (%) =
 ((Input Reading - Output Reading) / Input Reading) × 100
 ```
 
-The actual MQ135 output should be properly calibrated before interpreting the readings as CO₂ concentration.
-
----
-
-## 🏗️ System Architecture
+### Example
 
 ```text
-                 EXHAUST AIR
-                     │
-                     ▼
-              ┌─────────────┐
-              │ MQ135 INPUT │
-              └──────┬──────┘
-                     │
-                     ▼
-              ┌─────────────┐
-              │  AIR PUMP   │
-              └──────┬──────┘
-                     │
-                     ▼
-        ┌────────────────────────┐
-        │       ALGAE TANK       │
-        │                        │
-        │      MICROALGAE        │
-        │                        │
-        │  Temperature Sensor    │
-        │  Water-Level Sensor    │
-        └───────────┬────────────┘
-                    │
-                    ▼
-             ┌─────────────┐
-             │ MQ135 OUTPUT│
-             └──────┬──────┘
-                    │
-                    ▼
-                 ESP32
-                    │
-          ┌─────────┴─────────┐
-          ▼                   ▼
-     Relay Module        AI / ML Model
-          │                   │
-     ┌────┴────┐              ▼
-     ▼         ▼       Capture Efficiency
- Air Pump     LED
+Input Reading  = 1000
+Output Reading = 700
+
+Efficiency =
+((1000 - 700) / 1000) × 100
+
+Efficiency = 30%
 ```
+
+> **Note:** MQ135 is a general-purpose air-quality sensor. Its raw analog output should not automatically be interpreted as an exact CO₂ concentration without proper calibration.
 
 ---
 
-## 📁 Suggested Project Structure
+## 📈 System Monitoring
+
+The system can monitor and display:
+
+* 🌫️ Input MQ135 reading
+* 🌱 Output MQ135 reading
+* 📊 Capture efficiency
+* 🤖 AI-predicted efficiency
+* 🌡️ Temperature
+* 💧 Water-level status
+* 💨 Air-pump status
+* 💡 LED status
+* ⚙️ Automated control status
+
+---
+
+## 📁 Project Structure
 
 ```text
 Ai-powered-smart-algae-exhausat-carbon-capture-system/
 │
 ├── README.md
 ├── requirements.txt
+├── app.py
 │
 ├── firmware/
 │   └── esp32_code.ino
@@ -227,29 +315,37 @@ Ai-powered-smart-algae-exhausat-carbon-capture-system/
 
 ## 💻 Software Requirements
 
-* Python 3.10 or newer
+* Python 3.10+
 * Arduino IDE
 * ESP32 Board Package
-* VS Code / PyCharm / Jupyter Notebook
-* Streamlit (if dashboard is used)
+* Visual Studio Code
+* Streamlit
+* TensorFlow
+* NumPy
+* Pandas
+* Scikit-learn
+* Joblib
+* Matplotlib
+* Seaborn
+* Plotly
 
 ---
 
-## 📦 Python Installation
+## 📦 Installation
 
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/AjayA23/Ai-powered-smart-algae-exhausat-carbon-capture-system.git
 ```
 
-Enter the project directory:
+### 2. Open the Project Folder
 
 ```bash
 cd Ai-powered-smart-algae-exhausat-carbon-capture-system
 ```
 
-Install Python dependencies:
+### 3. Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -257,75 +353,108 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Run the AI / Dashboard
+## ▶️ Run the Streamlit Application
 
-If the project contains a Streamlit dashboard:
+Run the following command:
 
 ```bash
 streamlit run app.py
 ```
 
+The application will open in your browser.
+
 ---
 
-## 📈 Expected Output
+## 📄 requirements.txt
 
-The system can provide:
-
-* 🌫️ Input air-quality reading
-* 🌱 Output air-quality reading
-* 💨 Air pump status
-* 🌡️ Temperature
-* 💧 Water-level status
-* 📊 Capture efficiency
-* 🤖 AI-predicted efficiency
-* 💡 LED status
-* ⚙️ Automated actuator control
+```text
+tensorflow
+numpy
+pandas
+scikit-learn
+joblib
+matplotlib
+seaborn
+plotly
+streamlit
+```
 
 ---
 
 ## 🌍 Applications
 
-* Industrial exhaust monitoring
-* Environmental monitoring
-* Educational projects
-* Smart agriculture
-* Algae-based carbon capture research
-* IoT-based pollution monitoring
-* Sustainable energy and environmental systems
+The system can be explored for:
+
+* 🏭 Industrial exhaust monitoring
+* 🌱 Environmental monitoring
+* 🌿 Algae-based carbon capture research
+* 📡 IoT-based pollution monitoring
+* 🧪 Academic and educational projects
+* 🌎 Sustainable technology research
+* 📊 Smart environmental data analysis
 
 ---
 
-## 🔮 Future Improvements
+## 🔮 Future Scope
 
-* Real CO₂ sensor integration for more accurate CO₂ measurement
-* Cloud-based IoT dashboard
+Future improvements can include:
+
+* Dedicated calibrated CO₂ sensor
+* Cloud-based IoT monitoring
 * Mobile application
-* Real-time data logging
+* Real-time database
 * Automated algae health monitoring
 * Solar-powered operation
-* Improved ML prediction models
-* Multiple algae tanks for higher capture capacity
-* Long-term performance analysis
+* Improved Machine Learning models
+* Multiple algae tanks
+* Long-term carbon capture analysis
+* Remote monitoring and alerts
+* Automatic data logging
+* Advanced sensor calibration
 
 ---
 
 ## ⚠️ Important Note
 
-The MQ135 is a **general-purpose air-quality sensor** and its analog output should not automatically be treated as a calibrated CO₂ concentration. Accurate CO₂ measurement requires appropriate calibration and, for quantitative CO₂ measurement, a dedicated CO₂ sensor.
+The **MQ135** is a general-purpose air-quality sensor. Raw MQ135 readings should not be directly considered as precise CO₂ concentration values without proper calibration.
 
-This project is intended as an experimental/educational prototype for smart environmental monitoring and algae-based carbon capture.
+This project is an **experimental and educational prototype** demonstrating the integration of:
+
+**IoT + Artificial Intelligence + Machine Learning + Sensors + Algae-Based Carbon Capture**
+
+Actual carbon capture performance depends on factors such as algae species, lighting, temperature, gas flow rate, tank design, sensor calibration, and operating conditions.
 
 ---
 
 ## 👨‍💻 Author
 
-devanand amrute
+### Devanand Amrute
 
 GitHub:
 https://github.com/AjayA23
 
 ---
 
+## 🔗 Project Links
+
+### 🌐 Live Demo
+
+https://ai-powered-smart-algae-exhausat-carbon-capture-system-syer5tuc.streamlit.app/
+
+### 💻 GitHub Repository
+
+https://github.com/AjayA23/Ai-powered-smart-algae-exhausat-carbon-capture-system
+
+---
+
 ## 📜 License
 
-This project is available for educational and research purposes. Add an appropriate open-source license to the repository if you want others to reuse and modify the code.
+This project is intended for educational and research purposes.
+
+An open-source license such as the **MIT License** can be added if you want to allow others to use, modify, and distribute the project.
+
+---
+
+## ⭐ Support
+
+If you find this project useful, you can **star the GitHub repository** and share the project with others interested in AI, IoT, environmental monitoring, and sustainable technology.
